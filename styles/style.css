@@ -72,7 +72,7 @@ input[type="radio"] {
 /* Slider styles */
 
 slider, [slider] {
-  height: 10px;
+  height: 14px;
 }
 
 slider div.bar, [slider] div.bar {
@@ -80,33 +80,37 @@ slider div.bar, [slider] div.bar {
 }
 
 slider div.handle.active:after, [slider] div.handle.active:after {
-    background-color: #52A256;
+    background-color: #8D52A2;
 }
 
 slider div.handle, [slider] div.handle {
-  top: -5px;
-  border: 1px solid #394D5D;
+  width: 22px;
+  height: 22px;
+  top: -4px;
+  border: 1px solid #8D52A2;
 }
 
 slider div.handle:after, [slider] div.handle:after {
-    background-color: #394D5D;
-    top: 5px;
-    left: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: orange;
+  top: 4px;
+  left: 4px;
 }
 
 slider div.bubble.limit.low,
 slider div.bubble.limit.high {
-  top: 13px;
-  color: #394D5D;
-  font-size: 16px;
+  top: 15px;
+  color: #8A599A;
+  font-size: 20px;
 }
 
 
 slider div.bubble, [slider] div.bubble {
   display: inline-block;
-  color: #394D5D;
-  top: -30px;
-  font-size: 16px;
+  color: #8A599A;
+  top: -31px;
+  font-size: 20px;
 }
 
 @media (min-width: 768px) {

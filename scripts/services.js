@@ -35,7 +35,7 @@ BMIServices.service('BMI', function() {
   }
 
   service.assess = function(bmi) {
-    if(bmi > 25) {
+    if(bmi >= 25) {
       return 'overweight';
     } else if(bmi < 18.5) {
       return 'underweight';
