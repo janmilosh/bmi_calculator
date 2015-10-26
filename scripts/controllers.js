@@ -4,7 +4,7 @@ var BMIControllers = angular.module('BMIControllers', []);
 
 BMIControllers.controller('HomeController', function ($scope, $rootScope, BMI) {
   $scope.units = 'english';
-  $scope.metrics = new BMI.initializeMetrics(70, 150);
+  $scope.metrics = new BMI.initializeMetrics(70, 155);
   $scope.assessment = 'normalweight';
 
   $rootScope.$on('newInches', function(event, inches) {
