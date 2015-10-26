@@ -1,0 +1,116 @@
+body {
+}
+
+h1, h2, h3 {
+  margin: 16px 0;
+  color: #8D52A2;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #D4B8DE;
+}
+
+p {
+  font-size: 20px;
+}
+
+label {
+  margin-right: 15px;
+  font-weight: normal;
+  font-size: 20px;
+  color: #8D52A2;
+}
+
+input[type="radio"] {
+  position: relative;
+  top: -2px;
+}
+
+.header {
+  background: #5F3C6B;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 24px;
+  margin: 10px 0 12px;
+}
+
+.centered {
+  margin: 0 auto;
+  float: none;
+}
+
+.message.underweight {
+  background: #EC9494;
+}
+
+.message.overweight {
+  background: #EC9494;
+}
+
+.message {
+  background: #8BDC8B;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.message h2 {
+  color: white;
+  margin: 0 0 15px;
+  font-size: 30px;
+}
+
+
+/* Slider styles */
+
+slider, [slider] {
+  height: 10px;
+}
+
+slider div.bar, [slider] div.bar {
+  background: #8D52A2;
+}
+
+slider div.handle.active:after, [slider] div.handle.active:after {
+    background-color: #52A256;
+}
+
+slider div.handle, [slider] div.handle {
+  top: -5px;
+  border: 1px solid #394D5D;
+}
+
+slider div.handle:after, [slider] div.handle:after {
+    background-color: #394D5D;
+    top: 5px;
+    left: 5px;
+}
+
+slider div.bubble.limit.low,
+slider div.bubble.limit.high {
+  top: 13px;
+  color: #394D5D;
+  font-size: 16px;
+}
+
+
+slider div.bubble, [slider] div.bubble {
+  display: inline-block;
+  color: #394D5D;
+  top: -30px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+      width: 100%;
+  }
+}

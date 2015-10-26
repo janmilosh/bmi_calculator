@@ -1,0 +1,37 @@
+<div ng-controller="HomeController">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 centered">
+        <form name="form">
+          <label>
+            <input type="radio" ng-model="units" value="english">
+            English
+          </label>
+          <label>
+            <input type="radio" ng-model="units" value="metric">
+            Metric
+          </label><br/>
+        </form>
+        <div class="slider-container" ng-if="units==='english'">
+          <!--https://github.com/PopSugar/angular-slider-->
+          <h3>Height in Inches</h3>
+          <slider slider-update floor="48" ceiling="85" step="0.2" precision="1" ng-model="metrics.inches"></slider>
+          <h3>Weight in Pounds</h3>
+          <slider slider-update floor="70" ceiling="400" step="1" precision="1" ng-model="metrics.pounds"></slider>
+        </div>
+        <div class="slider-container" ng-if="units==='metric'">
+          <h3>Height in centimeters</h3>
+          <slider slider-update floor="122" ceiling="216" step="1" precision="1" ng-model="metrics.centimeters"></slider>
+          <h3>Weight in Kilograms</h3>
+          <slider slider-update floor="31.8" ceiling="181.4" step="0.2" precision="1" ng-model="metrics.kilograms"></slider>
+        </div>
+        <div class="message" ng-class="[{overweight: assessment == 'overweight'}, {underweight: assessment == 'underweight'}]">
+          <h2>BMI: {{ metrics.BMI | number:1 }}</h2>
+          <p ng-if="assessment == 'underweight'">Please see your doctor, you're getting too thin.</p>
+          <p ng-if="assessment == 'overweight'">Please see your doctor, you're getting too heavy.</p>
+          <p ng-if="assessment == 'normalweight'">Congratulations, your BMI is withing normal range.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
