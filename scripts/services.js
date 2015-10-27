@@ -31,7 +31,7 @@ BMIServices.service('BMI', function() {
   }
   
   service.calculateBMI = function(height, weight) {
-    return (weight/(height * height)) * 703;
+    return Math.round(10 * (weight/(height * height)) * 703) / 10;
   }
 
   service.assess = function(bmi) {
