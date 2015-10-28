@@ -15,23 +15,23 @@ BMIServices.service('BMI', function() {
   }
 
   service.useKilograms = function(pounds) {
-    return Math.round(pounds * 10 / 2.20462) / 10;
+    return parseFloat((pounds / 2.20462).toFixed(1));
   }
 
   service.usePounds = function(kilograms) {
-    return Math.round(kilograms * 2.20462 * 10) / 10;
+    return parseFloat((kilograms * 2.20462).toFixed(1));
   }
 
   service.useCentimeters = function(inches) {
-    return Math.round(inches * 2.54 * 10) / 10;
+    return parseFloat((inches * 2.54).toFixed(1));
   }
 
   service.useInches = function(centimeters) {
-    return Math.round(centimeters * 10 / 2.54) / 10;
+    return parseFloat((centimeters / 2.54).toFixed(1));
   }
   
   service.calculateBMI = function(height, weight) {
-    return Math.round(10 * (weight/(height * height)) * 703) / 10;
+    return parseFloat(((weight/(height * height)) * 703).toFixed(1));
   }
 
   service.assess = function(bmi) {
